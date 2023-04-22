@@ -1,6 +1,6 @@
-Lab Report 2!
+##Lab Report 2!
 ---
-Creating a String Server
+#Creating a String Server
 
 
 
@@ -13,7 +13,7 @@ Creating a String Server
 
 
 
-Debugging
+#Debugging
 
 Let's take a look at some code that has a bug. 
 
