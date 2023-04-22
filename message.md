@@ -1,4 +1,5 @@
 ##Lab Report 2!
+
 ---
 #Creating a String Server
 
@@ -78,3 +79,9 @@ static void reverseInPlace(int[] arr) {
 Now the code runs in a way that swaps the values with the one at the opposite end.
 
 The first and last value get swapped, the second and second to last get swapped and so on till it reaches the middle, where all the values should have been moved.
+
+##What I've learned
+
+---
+
+Something that I learned in Lab 2 was how to upload changes that I made to a remote file. Throughout lab 2 and in lab 3 there were times where I would make changes to the code on my personal computer and those changes were able to be uploaded to the remote file online. This will allow me to make changes from multiple places and then access those changes anywhere else, which is very useful. 
