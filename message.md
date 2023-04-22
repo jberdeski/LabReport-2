@@ -14,6 +14,7 @@
 
 
 #Debugging
+
 Let's take a look at some code that has a bug. 
 
 ![Code w/ some Bugs](code-with-bug.png)
@@ -45,10 +46,12 @@ Now for another test:
 **Uh Oh!** This test does not give us the expected output
 >`Expected output:`
 >	{0, 91, 43}
+
 >`Actual output:`
 >	{0, 0, 0}	
 
 *Why did it do this?*
+
 Well if we look back to the code we can analyze line by line...
 ```
  static void reverseInPlace(int[] arr) {
@@ -73,4 +76,5 @@ static void reverseInPlace(int[] arr) {
   }
 ```
 Now the code runs in a way that swaps the values with the one at the opposite end.
+
 The first and last value get swapped, the second and second to last get swapped and so on till it reaches the middle, where all the values should have been moved.
