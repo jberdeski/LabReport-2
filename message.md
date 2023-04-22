@@ -83,7 +83,8 @@ Now the code runs in a way that swaps the values with the one at the opposite en
 
 The first and last value get swapped, the second and second to last get swapped and so on till it reaches the middle, where all the values should have been moved.
 
-##What I've learned
+What I've learned
+===
 
 ---
 
