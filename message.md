@@ -2,7 +2,7 @@ Lab Report 2!
 ===
 
 ---
-##Creating a String Server
+## Creating a String Server
 
 
 
