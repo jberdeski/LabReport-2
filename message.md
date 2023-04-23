@@ -2,8 +2,8 @@ Lab Report 2!
 ===
 
 ---
-Creating a String Server
----
+##Creating a String Server
+
 
 I was tasked with creating a web server that "should keep track of a single string that gets added to by incoming requests"
 
