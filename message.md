@@ -5,14 +5,64 @@ Lab Report 2!
 Creating a String Server
 ---
 
+I was tasked with creating a web server that "should keep track of a single string that gets added to by incoming requests"
+
+This is how I did that:
+
+```
+import java.io.IOException;
+import java.net.URI;
 
 
+class Handler implements URLHandler {
+    String s = "";
+    public String handleRequest(URI url) {
+        if (url.getPath().equals("/")) {
+            return String.format(s);
+        }
+        else if (url.getPath().contains("/add-message")) {
+            String[] message = url.getQuery().split("=");
+            if(message[0].equals("s")){
+                s += message[1] + "\n";
+                return String.format(s);
+            }  
+        }
+        return "404 Not Found!";
+    }
+}
 
+class StringServer {
+    public static void main(String[] args) throws IOException {
+        if(args.length == 0){
+            System.out.println("Missing port number, please try a different number!");
+            return;
+        }
 
+        int port = Integer.parseInt(args[0]);
 
+        Server.start(port, new Handler());
+    }
+}
+```
 
+This is my main StringServer.java file.
 
+When ran it gives a link to a web server, and if you add `/add-message?s=<string>`(Where <string> is a message) to the end of the url 
+the web page will update and display your message. 
+	
+![added 1 message](ghoul-message.png)
 
+The way this works is through the method handleRequest which analyzes the url and checks to see if certain things are in it.
+	
+In this case it checks to see if all parts of the add message request are there then saves the message to a string variable, and prints out that string.
+	
+As I've mentioned the string gets saved to a variable, because of this we can add on more messages and still see the previous messages that were added.
+	
+![more messages added](3-messages.png)
+	
+Here I've ran the url twice, once adding `/add-message?s=<is>` and the second time `/add-message?s=cool` 
+
+Since the variable s exists outside of the method it retains the messages we have added to it allowing the web page to display all of them. 
 
 
 
