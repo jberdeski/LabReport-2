@@ -87,6 +87,7 @@ public void testReverseInPlace() {
 
 When this code is run the result is as expected
 > {3}
+	
 This is because this array contains only one element so the original order and reveresed order are the same.
 Now for another test:
 ```
